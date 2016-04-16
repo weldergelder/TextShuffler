@@ -5,8 +5,7 @@ const XMLExtract = require('xml-extract');
 var router = express.Router();
 
 /* GET home page. */
-router.route('/define/:reqWord')
-	
+router.route('/define/:reqWord')	
 	.post(function(req, res){
 
 		try {
