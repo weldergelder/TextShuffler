@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+		<title>Welcome to TextShuffler!</title>	
+
+	    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+	</head>
+
+
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Welcome to TextShuffler!</h1>
+				<p>Paste your text, and have it shuffled!</p>
+			</div>
+
+
+
+			<div class="clearfix"> 
+
+				<div class="col-md-6">
+					<form ng-Submit="post()"> 
+						<h4>Enter Text Here</h4>
+						<textarea required class="form-control" maxlength="200" rows="6" placeholder="Say something" ng-model="inputText"></textarea> 
+						<input class="btn submit-btn pull-right" type="submit" value="Shuffle!" /> 
+					</form> 
+				</div>
+				<div class="col-md-6">
+					<div id="ShuffledText"> 
+						<h4>Shuffled Text</h4> 
+						<div class="post" ng-repeat="post in posts | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'">  
+							<p>TODO: Place all text here</p> 
+						</div> 
+					</div> 
+				</div>
+			</div> 
+
+
+
+		</div>
+		<!--script includes go here-->
+	 	<script src="javascripts/angular.min.js"></script>
+	 	<script src="javascripts/angular-route.js"></script>
+	 	<script src="javascripts/angular-resource.js"></script>
+	  	<script src="javascripts/textshuffler.js"></script>
+	    <script src="javascripts/bootstrap.min.js"></script>
+
+	</body>
+
+
+</html>
