@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var dict = require('dictionaryapi');
 const XMLExtract = require('xml-extract');
 
@@ -16,6 +17,7 @@ router.route('/define/:reqWord')
 
 				XMLExtract(result, 'fl', false, (error, element) => {
 					if(error) {
+						res.send(error);
 						console.log(error);
 					}
 
